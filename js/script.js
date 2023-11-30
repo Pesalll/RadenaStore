@@ -3,14 +3,14 @@ const ITEMS = [
         id: 1,
         name: "Keripik Tempe",
         price: 15,
-        image: 'img/Product/keripik tempe.jpg',
+        image: './img/Product/keripik tempe.jpg',
         qty: 1
     },
     {
         id: 2,
         name: "Kentang Stick",
         price: 11,
-        image: 'img/Product/kentang.jpg',
+        image: './img/Product/kentang.jpg',
         qty: 1
     },
     {
@@ -24,63 +24,63 @@ const ITEMS = [
         id: 4,
         name: "Kuping Gajah",
         price: 9,
-        image: 'img/Product/20221227_084824.jpg',
+        image: './img/Product/20221227_084824.jpg',
         qty: 1
     },
     {
         id: 5,
         name: "Choco Crunch",
         price: 10,
-        image: 'img/Product/20221227_085025.jpg',
+        image: './img/Product/20221227_085025.jpg',
         qty: 1
     },
     {
         id: 6,
         name: "Makaroni",
         price: 10,
-        image: 'img/Product/makaroni.jpg',
+        image: './img/Product/makaroni.jpg',
         qty: 1
     },
     {
         id: 7,
         name: "Stik Keju",
         price: 13,
-        image: 'img/Product/anuanTes.jpg',
+        image: './img/Product/anuanTes.jpg',
         qty: 1
     },
     {
         id: 8,
         name: "Gabus Keju",
         price: 10,
-        image: 'img/Product/anuankeju.jpg',
+        image: './img/Product/anuankeju.jpg',
         qty: 1
     },
     {
         id: 9,
         name: "Ring Keju",
         price: 12,
-        image: 'img/Product/ringkeju.jpg',
+        image: './img/Product/ringkeju.jpg',
         qty: 1
     },
     {
         id: 10,
         name: "Kue Soes",
         price: 17,
-        image: 'img/Product/kuesus.jpg',
+        image: './img/Product/kuesus.jpg',
         qty: 1
     },
     {
         id: 11,
         name: "Sale Pisang",
         price: 12,
-        image: 'img/product/salepisang.jpg',
+        image: './img/Product/salepisang.jpg',
         qty: 1
     },
     {
         id: 12,
         name: "Ring Pedas",
         price: 10,
-        image: 'img/product/ringpedas.jpg',
+        image: './img/Product/ringpedas.jpg',
         qty: 1
     },
 ]
