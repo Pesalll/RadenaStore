@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <title>Toko Kue Radena</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
@@ -15,49 +16,128 @@
             <a><span>Radena</span>Snack</a>
         </div>
         <div class="nav-list">
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="order.html">Order</a>
+            <a href="#home">Home</a>
+            <a href="#katalog">Catalog</a>
+            <!-- <a href="#order" id="order_btn">Order</a> -->
+            <a href="#contact">Contact</a>
+            <a href="./Kalkulator/tabel.html">Calculator</a>
         </div>
         <div class="nav-extra">
-            <a href="#" id="shop">
+            <a href="#" id="hop">
                 <div class="blanja">
-                    <i data-feather="shopping-cart"></i>
-                    <!-- <div id="cartamount" class="cartamount">0</div> -->
+                    <i data-feather="shopping-cart" id="open_cart_btn"></i>
+                    <!-- <span id="cartamount" class="items_num">0</span> -->
                 </div>
             </a>
             <a href="#" id="burgir-menu"><i data-feather="menu"></i></a>
+
+            <div class="list"></div>
         </div>
     </nav>
     <!-- Nav Section -->
+
+    <div class="backdrop"></div>
+
+    <div class="sidecart" id="sidecart">
+        <div class="cart_content">
+            <div class="cart_content">
+            <div class="cart_header">
+                <i data-feather="shopping-cart" style="width: 30px;"></i>
+                <div class="header_title">
+                    <h2>Your Cart</h2>
+                    <span id="items_num">0</span>
+                </div>
+                <span id="close_btn" class="close_btn">&times;</span>
+            </div>
+
+            <div class="cart_items">
+                
+            </div>
+
+            <div class="cart_actions">
+                <div class="subtotal">
+                    <p>SUBTOTAL:</p>
+                    <p>Rp. <span id="subtotal_price">0</span>k</p>
+                </div>
+                <!-- <button>View Cart</button> -->
+                <button id="checkout" target="_blank">Checkhout</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <div class="hero" id="home">
         <div class="hero-content">
             <h1>Welcome To <span>Radena</span>Snack</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis nulla animi nostrum ut assumenda harum</p>
-            <a href="https://api.whatsapp.com/send?phone=6287857176913 &text=Hai Admin, Saya Mau Pesan Cakenya dengan Variant ........ Sebanyak ......... pcs. Total Harganya adalah...." class="cta" target="_blank">Pesan</a>
+            <p>Selamat Datang di website Radena Snack. Kami menjual berbagai macam makanan ringan, manis maupun asin</p>
+            <a href="#katalog" class="cta">Pesan</a>
         </div>
     </div>
     <!-- Hero Section -->
+
+    <!-- Katalog section start -->
+    <div class="judul">
+        <h2><span>Our</span> Catalog</h2>   
+    </div>
+
+    <div class="katalog" id="katalog">
+
+    </div>
+    <!-- Katalog section end -->
     
+    <!-- order section start -->
+    <!-- <section class="order" id="order">
+        <h2>Pembayaran</h2>
+        <div class="order_header">
+            <span class="">ITEM</span>
+            <span class="">QUANTITY</span>
+            <span class="">PRICE</span>
+        </div>
+
+        <div class="order_items">
+            <div class="order_item">
+                <div class="order_details">
+                    <img src="img/bg-hero.jpg" alt="" width="100" height="100">
+                    <p>Keripik Tempe</p>
+                </div>
+                <div class="order_quantity">
+                    <span onclick="decreaseQty()">-</span>
+                    <strong>0</strong>
+                    <span onclick="increaseQty()">+</span>
+                </div>
+                <div class="order_price">
+                    <strong>0k</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="order_actions">
+            <div class="subtotal">
+                <strong>Total</strong>
+                <span>Rp.0</span>
+            </div>
+            <button>PURCHASE</button>
+        </div>
+    </section> -->
+    <!-- order section end -->
+
     <section id="contact" class="contact">
         <h2><span>Our</span> Contact</h2>
         <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.73784868948186!2d106.81021681694058!3d-6.5462166210104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1696470705540!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <form action="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d374.63020567947956!2d106.80982915172153!3d-6.5462738373388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c3f0e55d6abb%3A0xdd3a5b565cacbae0!2sRadenaSnack!5e1!3m2!1sen!2sid!4v1701313525864!5m2!1sen!2sid"width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form target="_blank" action="https://formsubmit.co/bbm8971@gmail.com" method="POST">
                 <div class="input-group">
                     <i data-feather="user"></i>
-                    <input type="text" placeholder="Masukan Nama">    
+                    <input type="text" name="Name" placeholder="Masukan Nama Anda" autocomplete="off" required>    
                 </div>
                 <div class="input-group">
                     <i data-feather="mail"></i>
-                    <input type="text" placeholder="Masukan Email">
+                    <input type="text" name="Email" placeholder="Masukan Email Anda" autocomplete="off" required>
                 </div>
                 <div class="input-group">
-                    <i data-feather="phone"></i>
-                    <input type="text" placeholder="Masukan Nomor Hp.">
+                    <i data-feather="send"></i>
+                    <textarea name="Message" id="" cols="4" rows="4" placeholder="Masukan Pesan Anda" autocomplete="off" required></textarea>
                 </div>
                 <button type="submit">Kirim Pesan</button>
             </form>
@@ -67,8 +147,7 @@
     <footer>
         <div class="social">
             <a href="https://www.instagram.com/radena_snack/"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="twitter"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="mailto:bbm8971@gmail.com?subject=Client&body=Wrote your message"><i data-feather="mail"></i></a>
         </div>
 
         <div class="link">
@@ -85,7 +164,6 @@
     <!-- Footer section -->
 
     <script>feather.replace();</script>
-    <script src="js/script.js"></script>
-    <script src="js/p.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

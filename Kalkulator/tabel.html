@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tabel</title>
+    <link rel="stylesheet" href="tavel.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a><span>Radena</span>Snack</a>
+        </div>
+        <div class="nav-list">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#katalog">Catalog</a>
+            <!-- <a href="#order" id="order_btn">Order</a> -->
+            <a href="../index.html#contact">Contact</a>
+            <a href="./Kalkulator/tabel.html">Calculator</a>
+        </div>
+        <div class="nav-extra">
+            <a href="#" id="hop">
+                <div class="blanja">
+                    <i data-feather="shopping-cart" id="open_cart_btn"></i>
+                    <!-- <span id="cartamount" class="items_num">0</span> -->
+                </div>
+            </a>
+            <a href="#" id="burgir-menu"><i data-feather="menu"></i></a>
+
+            <div class="list"></div>
+        </div>
+    </nav>
+
+    <table class="kalkulator">
+        <tr>
+            <td colspan="3"><input class="display-box" type="text" placeholder="Masukan.." id="result"></td>
+            <td><input type="button" value="C" onclick="clearscreen()" id="btn"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="display('1')"></td>
+            <td><input type="button" value="2" onclick="display('2')"></td>
+            <td><input type="button" value="3" onclick="display('3')"></td>
+            <td><input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="display('4')"></td>
+            <td><input type="button" value="5" onclick="display('5')"></td>
+            <td><input type="button" value="6" onclick="display('6')"></td>
+            <td><input type="button" value="-" onclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="display('7')"></td>
+            <td><input type="button" value="8" onclick="display('8')"></td>
+            <td><input type="button" value="9" onclick="display('9')"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="=" onclick="calculate()" id="btn"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+    </table>
+    <script src="table.js"></script>
+</body>
+</html>

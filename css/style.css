@@ -51,17 +51,20 @@ body{
     font-size: 1.5rem;
     margin: 0 1rem;
     padding-right: 1rem;
+    transition: .2s;
 }
 
 .nav .nav-list a:hover{
+    transition: .2s;
     color: var(--primary);
+    text-shadow: .5px .5px .5px rgba(0, 0, 0,0.8);
 }
 
 .nav .nav-list a::after{
     content: '';
     display: block; 
     padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid var(--primary);
+    border-bottom: 0.2rem solid var(--primary);
     transform: scaleX(0);
     transition: 0.2s linear;
 }
@@ -75,8 +78,8 @@ body{
     margin: 0 0.6rem;
 }
 
-.nav .nav-extra a:hover{
-    color: var(--primary);
+.nav .nav-extra a:hover, #open_cart_btn:hover{
+    color:#c799be;
 }
 
 #burgir-menu{
@@ -368,13 +371,14 @@ body{
     padding: 6rem 7% 1.4rem;
 }
 
-.about h2, .gallery h2, .contact h2{
+.about h2, .gallery h2, .contact h2, .judul h2, .order h2{
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
+    text-shadow: .5px .5px .5px #000;
 }
 
-.about h2 span, .gallery h2 span, .contact h2 span{
+.about h2 span, .gallery h2 span, .contact h2 span, .judul h2 span{
     color: var(--primary);
 }
 
@@ -393,7 +397,7 @@ body{
 
 .contact .row form{
     flex: 1 1 45rem;
-    padding: 5rem 2rem;
+    padding: .5rem 2rem;
     text-align: center;
 }
 
@@ -406,12 +410,16 @@ body{
     padding-left: 2rem;
 }
 
-.contact .row form .input-group input{
+.contact .row form .input-group input,textarea{
     width: 100%;
     padding: 2rem;
     font-size: 1.7rem;
     background: none;
     color: #fff;
+
+}
+textarea::placeholder {
+    transform: translateY(35px);
 }
 
 .contact .row form button{
@@ -473,9 +481,9 @@ footer .credit a{
 /* Katalog Start */
 .judul{
     text-align: center;
-    border-bottom: #000 solid 1.5px;
-    padding-top: 120px;
-    margin: 0 200px 0 ;
+    padding-top: 60px;
+    margin: 0 370px 0;
+    margin-bottom: 0;
 }
 
 .katalog{
@@ -483,7 +491,7 @@ footer .credit a{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .card {
@@ -504,12 +512,14 @@ footer .credit a{
     margin-top: 1rem;
     transition: .2s;
     border-radius: 5px;
+    border: solid 1px black;
 }
 
 .card:hover > img {
     width: 100%;
     transition: 0.2s;
     margin: 0;
+    border-radius: 0;
 }
 
 .price {
@@ -535,131 +545,76 @@ footer .credit a{
 /* Katalog End */
 
 /* Order Start */
-/* .content-section {
-  margin: 1em;
+.order{
+    margin: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
 }
 
-.container {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 9rem 1.5em 5rem;
-}
-.section-header {
-  font-weight: normal;
-  color: #333;
-  text-align: center;
-  font-size: 2.5em;
-  padding-bottom: 3rem;
+.order .order_header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 1.5px;
+    font-size: larger;
 }
 
-.cart-header {
-  font-weight: bold;
-  font-size: 1.25em;
-  color: #333;
+.order .order_header span{
+    padding: 0 2rem;
 }
 
-.cart-column {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid black;
-  margin-right: 1.5em;
-  padding-bottom: 10px;
-  margin-top: 10px;
+.order_items{
+    width: 80%;
 }
 
-.cart-row {
-  display: flex;
+.order_items .order_item{
+    margin-top: 1rem;
+    border: #000 1.2px solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    
+    & .order_price{
+    padding-right: 3rem;
+    }
+    & .order_quantity{
+        position: static;
+        margin-right: 14rem;
+        padding: 2px 4px;
+        background-color: var(--primary);
+        font-size: larger;
+        & span{
+            padding: 2px 4px;
+            transition: .2s;
+        }
+        & span:hover{
+            font-size: medium;
+            cursor: pointer;
+        }
+    }
+    & .order_details{
+        font-size: larger;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+    }
 }
 
-.cart-item {
-  width: 45%;
+.order .order_actions{
+    width: 80%;
+    margin: 3rem;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-
-.cart-price {
-  width: 20%;
-  font-size: 1.2em;
-  color: #333; 
-}
-
-.cart-quantity {
-  width: 35%;
-}
-
-.cart-item-title {
-  color: #333;
-  margin-left: .5em;
-  font-size: 1.2em;
-}
-
-.cart-item-image {
-  width: 75px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.btn-danger {
-  color: white;
-  background-color: #EB5757;
-  border: none;
-  border-radius: .3em;
-  font-weight: bold;
-}
-
-.btn-danger:hover {
-  background-color: #CC4C4C;
-}
-
-.cart-quantity-input {
-  height: 34px;
-  width: 50px;
-  border-radius: 5px;
-  border: 1px solid #56CCF2;
-  background-color: #eee;
-  color: #333;
-  padding: 0;
-  text-align: center;
-  font-size: 1.2em;
-  margin-right: 25px;
-}
-
-.cart-row:last-child {
-  border-bottom: 1px solid black;
-}
-
-.cart-row:last-child .cart-column {
-  border: none;
-}
-
-.cart-total {
-  padding: 0;
-  margin-left: 400px;
-  text-align: end;
-  margin-top: 20px;
-  margin-right: 20px;
-  border-top: solid black 1px;
-}
-
-.cart-total-title {
-  font-weight: bolder;
-  font-size: 2em;
-  color: black;
-  margin-right: 10px;
-}
-
-.cart-total-price {
-  margin-right: 40px;
-  color: #333;
-  font-size: 1.5em;
-}
-
-.btn-purchase {
-  padding: 4px 10px 4px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: var(--primary);
-  margin: 10px auto 5px auto;
-  font-size: 1.5em;
-}  */
 /* Order Start */
 
 
@@ -676,7 +631,7 @@ footer .credit a{
 /* tablet */
 @media (max-width: 758px){
     html{
-        font-size: 60%;
+        font-size: 75%;
     }
 
     #burgir-menu{
@@ -766,5 +721,7 @@ footer .credit a{
 }
 /* hp */
 @media (max-width: 450px){
-  
+  html{
+    font-size: 70%;
+  }
 }

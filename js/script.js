@@ -2,85 +2,85 @@ const ITEMS = [
     {
         id: 1,
         name: "Keripik Tempe",
-        price: 100,
+        price: 15,
         image: 'img/Product/keripik tempe.jpg',
         qty: 1
     },
     {
         id: 2,
         name: "Kentang Stick",
-        price: 100,
+        price: 11,
         image: 'img/Product/kentang.jpg',
         qty: 1
     },
     {
         id: 3,
-        name: "Bagelen",
-        price: 100,
+        name: "Bagelen Keju",
+        price: 22,
         image: 'img/Product/bagelen.jpg',
         qty: 1
     },
     {
         id: 4,
         name: "Kuping Gajah",
-        price: 100,
+        price: 9,
         image: 'img/Product/20221227_084824.jpg',
         qty: 1
     },
     {
         id: 5,
         name: "Choco Crunch",
-        price: 100,
+        price: 10,
         image: 'img/Product/20221227_085025.jpg',
         qty: 1
     },
     {
         id: 6,
         name: "Makaroni",
-        price: 100,
+        price: 10,
         image: 'img/Product/makaroni.jpg',
         qty: 1
     },
     {
         id: 7,
         name: "Stik Keju",
-        price: 100,
+        price: 13,
         image: 'img/Product/anuanTes.jpg',
         qty: 1
     },
     {
         id: 8,
         name: "Gabus Keju",
-        price: 100,
+        price: 10,
         image: 'img/Product/anuankeju.jpg',
         qty: 1
     },
     {
         id: 9,
         name: "Ring Keju",
-        price: 100,
+        price: 12,
         image: 'img/Product/ringkeju.jpg',
         qty: 1
     },
     {
         id: 10,
         name: "Kue Soes",
-        price: 100,
+        price: 17,
         image: 'img/Product/kuesus.jpg',
         qty: 1
     },
     {
         id: 11,
-        name: "Keripik Tempe",
-        price: 100,
-        image: '',
+        name: "Sale Pisang",
+        price: 12,
+        image: 'img/product/salepisang.jpg',
         qty: 1
     },
     {
         id: 12,
-        name: "Keripik Tempe",
-        price: 100,
-        image: '',
+        name: "Ring Pedas",
+        price: 10,
+        image: 'img/product/ringpedas.jpg',
         qty: 1
     },
 ]
@@ -94,6 +94,8 @@ const itemsEl = document.querySelector('.katalog');
 const cartItems = document.querySelector('.cart_items');
 const itemsNum = document.getElementById('items_num');
 const subtotalPrice = document.getElementById('subtotal_price');
+const orderItems = document.querySelector('.order_items')
+const checkoutBtn = document.querySelector('#checkout');
 
 let cart_data = []
 
@@ -103,6 +105,40 @@ backdrop.addEventListener('click', closeCart);
 
 renderItems();
 renderCartItems();
+
+
+
+checkoutBtn.addEventListener('click', () => {
+  // Buat array untuk menyimpan pesan checkout
+  const texts = [];
+  // Buat array untuk menyimpan alamat
+  const addresses = [];
+
+  // Loop melalui semua item di cart
+  for (const item of cart_data) {
+    // Tambahkan pesan checkout untuk setiap item ke array
+    texts.push(`*${item.name} (${item.qty} pcs) - Rp. ${item.price * item.qty}.000`);
+  }
+
+  // Gabungkan pesan checkout ke dalam satu string
+  const text = texts.join('\n');
+
+  // Tambahkan alamat ke array
+  addresses.push('Alamat pengiriman: [isi alamatmu disini]');
+
+  // Gabungkan alamat ke dalam satu string
+  const address = addresses.join('\n\n');
+
+  // Tampilkan pesan konfirmasi
+  var confirm = window.confirm("Apakah Anda yakin ingin checkout?");
+
+  // Jika pengguna mengonfirmasi, buka WhatsApp
+  if (confirm) {
+    // Redirect pelanggan ke WhatsApp
+    window.location.href = `https://wa.me/6287857176913?text=permisi,saya ingin memesan beberapa kue sebagai berikut : \n ${encodeURIComponent(`${text}\n\n${address}`)}`;
+  }
+});
+
 
 // Open Cart
 function openCart() {
