@@ -506,6 +506,11 @@ footer .credit a{
   
 }
 
+.card .kiloan{
+    font-size: smaller;
+    margin: 3px;
+}
+
 .card img{
     height: 90%;
     width: 90%;

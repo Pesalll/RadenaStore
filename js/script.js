@@ -218,6 +218,7 @@ function renderItems(){
         <img src="${item.image}" alt="">
         <h1>${item.name}</h1>
         <p class="price">${item.price}k</p>
+        <p class="kiloan">1/4 kg</p>
         <p><button>Add to Cart</button></p>
         `
         itemsEl.appendChild(itemEl)
