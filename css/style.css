@@ -482,7 +482,6 @@ footer .credit a{
 .judul{
     text-align: center;
     padding-top: 60px;
-    margin: 0 370px 0;
     margin-bottom: 0;
 }
 
@@ -627,6 +626,7 @@ footer .credit a{
 /* Media Queries */
 
 /* laptop */
+
 @media (max-width: 1366px){
     html{
         font-size: 75%;
@@ -716,17 +716,31 @@ footer .credit a{
         padding-top: 0;
     }
 
-    .katalog{
-        justify-content: center;
+    .hero{
+        min-height: 95vh;
     }
 
-    .card{
-        max-width: 150px;
+    .katalog{
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    .card {
+        max-width: 125px;
+        margin: auto 1rem;
+        margin-top: 100px;
+      }
+      
+      .card .kiloan{
+          font-size: smaller;
+          margin: 3px;
+      }
+      
 }
 /* hp */
 @media (max-width: 450px){
-  html{
+  /* html{
     font-size: 70%;
-  }
+  } */
 }
